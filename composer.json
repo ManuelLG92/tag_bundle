@@ -1,0 +1,21 @@
+{
+    "name": "wamb/tagging-bundle",
+    "description": "tagging",
+    "type": "symfony-bundle",
+    "require": {
+        "php": ">=8.1",
+        "symfony/framework-bundle": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wamb\\TaggingBundle\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Manuel Leon - WBO",
+            "email": "manuel@whiteboxoffice.com"
+        }
+    ]
+}

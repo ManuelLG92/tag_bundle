@@ -1,0 +1,3 @@
+App\Shared\Infrastructure\Symfony\EventListener\ExceptionsToJsonListener:
+  tags:
+    - { name: kernel.event_listener, event: kernel.exception }
