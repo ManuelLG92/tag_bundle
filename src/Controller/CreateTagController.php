@@ -14,17 +14,20 @@ use Wamb\TaggingBundle\Utils\Constants\TagProperties;
 
 final class CreateTagController extends AbstractController
 {
+    public function __construct( private readonly TagCommandValidator $commandValidator,
+                                 private readonly CreateTagHandler    $handler)
+    {
+    }
+
 
     /**
      * @throws ValidationCommandException
      * @throws InvalidAttributeException
      */
-    public function __invoke(Request             $request,
-                             TagCommandValidator $commandValidator,
-                             CreateTagHandler    $handler): JsonResponse
+    public function __invoke(Request $request): JsonResponse
     {
-        $commandValidator->validate($request->request->all());
-        ($handler)(new CreateTagCommand(
+        $this->commandValidator->validate($request->request->all());
+        ($this->handler)(new CreateTagCommand(
             $request->request->get(TagProperties::ID->value),
             $request->request->get(TagProperties::NAME->value),
         ));
