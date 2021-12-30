@@ -13,7 +13,7 @@ final class UpdateTag
     {
         $name = new Name($name);
         $tag = Tag::update($tag, $name);
-        return new JsonResponse(['updated' => $tag], 201);
+        return new JsonResponse(['updated' => $tag], 200);
 
     }
 }
