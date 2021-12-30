@@ -4,4 +4,5 @@ services:
     autowire: true      # Automatically injects dependencies in your services.
     autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
 
-  Wamb\TaggingBundle\Application\Command\CreateTag: ~
+  Wamb\TaggingBundle\Application\Command\CreateTag\CreateTagHandler: ~
+  Wamb\TaggingBundle\Infrastructure\Symfony\Validators\TagCommandValidator: ~
