@@ -10,8 +10,8 @@ class Identifier
     /**
      * @throws InvalidAttributeException
      */
-    public function __construct(private readonly string $id)
+    public function __construct(private readonly string $value)
     {
-        IdentifierException::is($id);
+        IdentifierException::is($value);
     }
 }
