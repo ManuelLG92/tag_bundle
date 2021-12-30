@@ -4,7 +4,6 @@ namespace Wamb\TaggingBundle\Application\Query\FindTagById;
 
 use Wamb\TaggingBundle\Application\Query\Response\TagDTO;
 use Wamb\TaggingBundle\Entity\Identifier;
-use Wamb\TaggingBundle\Entity\Name;
 use Wamb\TaggingBundle\Exception\InvalidAttributeException;
 use Wamb\TaggingBundle\Exception\NotFoundException;
 
