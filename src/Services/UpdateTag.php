@@ -2,8 +2,7 @@
 
 namespace Wamb\TaggingBundle\Services;
 
-use Symfony\Component\HttpFoundation\JsonResponse;
-use Wamb\TaggingBundle\Model\Tag;
+use Wamb\TaggingBundle\Entity\Tag;
 use Wamb\TaggingBundle\ValueObjects\Name;
 
 final class UpdateTag

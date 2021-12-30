@@ -1,4 +1,4 @@
-Wamb\TaggingBundle\Model\Tag:
+Wamb\TaggingBundle\Entity\Tag:
   type: entity
   table: tag
   uniqueConstraints:

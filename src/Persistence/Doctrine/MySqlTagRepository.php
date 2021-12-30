@@ -4,7 +4,7 @@ namespace Wamb\TaggingBundle\Persistence\Doctrine;
 
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
-use Wamb\TaggingBundle\Model\Tag;
+use Wamb\TaggingBundle\Entity\Tag;
 
 final class MySqlTagRepository extends ServiceEntityRepository
 {
