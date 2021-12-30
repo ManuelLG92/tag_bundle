@@ -1,5 +1,5 @@
 Wamb\TaggingBundle\Entity\Name:
-type: embeddable
+  type: embeddable
   fields:
     value:
       type: string
