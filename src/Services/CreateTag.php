@@ -8,12 +8,11 @@ use Wamb\TaggingBundle\Entity\Identifier;
 use Wamb\TaggingBundle\Entity\Name;
 use Wamb\TaggingBundle\Entity\Tag;
 use Wamb\TaggingBundle\Exception\InvalidAttributeException;
-use Wamb\TaggingBundle\Persistence\Doctrine\MySqlTagRepository;
 
 final class CreateTag
 {
     public function __construct(
-                private  readonly MySqlTagRepository $repository,
+                //private  readonly MySqlTagRepository $repository,
                 private EntityManagerInterface $manager
     )
     {

@@ -16,13 +16,12 @@ class TaggingExtension extends Extension
      */
     public function load(array $configs, ContainerBuilder $container)
     {
-        /*$loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/Config'));
-        var_dump($loader);
-        $loader->load('services.yaml');
-        $configuration = new Configuration();
+       $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+       $loader->load('services.yaml');
+        /*$configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
         foreach ($config as $key => $value) {
             $container->setParameter('tagging_bundle.' . $key, $value);
-        } */
+        }  */
     }
 }
