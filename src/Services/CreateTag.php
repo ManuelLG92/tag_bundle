@@ -4,11 +4,11 @@ namespace Wamb\TaggingBundle\Services;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Wamb\TaggingBundle\Entity\Identifier;
+use Wamb\TaggingBundle\Entity\Name;
 use Wamb\TaggingBundle\Entity\Tag;
 use Wamb\TaggingBundle\Exception\InvalidAttributeException;
 use Wamb\TaggingBundle\Persistence\Doctrine\MySqlTagRepository;
-use Wamb\TaggingBundle\ValueObjects\Identifier;
-use Wamb\TaggingBundle\ValueObjects\Name;
 
 final class CreateTag
 {

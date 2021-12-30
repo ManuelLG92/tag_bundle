@@ -2,8 +2,8 @@
 
 namespace Wamb\TaggingBundle\Services;
 
+use Wamb\TaggingBundle\Entity\Name;
 use Wamb\TaggingBundle\Entity\Tag;
-use Wamb\TaggingBundle\ValueObjects\Name;
 
 final class UpdateTag
 {

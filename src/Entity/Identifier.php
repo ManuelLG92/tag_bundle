@@ -1,6 +1,6 @@
 <?php
 
-namespace Wamb\TaggingBundle\ValueObjects;
+namespace Wamb\TaggingBundle\Entity;
 
 use Wamb\TaggingBundle\Exception\IdentifierException;
 use Wamb\TaggingBundle\Exception\InvalidAttributeException;

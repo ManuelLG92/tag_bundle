@@ -6,8 +6,8 @@ Wamb\TaggingBundle\Entity\Tag:
       columns: [ id ]
   embedded:
     id:
-      class: Wamb\TaggingBundle\ValueObjects\Identifier
+      class: Wamb\TaggingBundle\Entity\Identifier
       columnPrefix: false
     name:
-      class: Wamb\TaggingBundle\ValueObjects\Name
+      class: Wamb\TaggingBundle\Entity\Name
       columnPrefix: false

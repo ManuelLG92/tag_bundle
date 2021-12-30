@@ -2,9 +2,6 @@
 
 namespace Wamb\TaggingBundle\Entity;
 
-use Wamb\TaggingBundle\ValueObjects\Identifier;
-use Wamb\TaggingBundle\ValueObjects\Name;
-
 class Tag
 {
     private function __construct(
