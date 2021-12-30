@@ -1,0 +1,13 @@
+Wamb\TaggingBundle\Model\Tag:
+  type: entity
+  table: tag
+  uniqueConstraints:
+    id_idx:
+      columns: [ id ]
+  embedded:
+    id:
+      class: Wamb\TaggingBundle\ValueObjects\Identifier
+      columnPrefix: false
+    name:
+      class: Wamb\TaggingBundle\ValueObjects\Name
+      columnPrefix: false

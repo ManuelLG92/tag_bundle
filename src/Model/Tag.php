@@ -8,15 +8,15 @@ use Wamb\TaggingBundle\ValueObjects\Name;
 class Tag
 {
     private function __construct(
-        protected Name $name,
         protected readonly Identifier $id,
+        protected Name $name,
     )
     {
     }
 
-    public static function create(Name $name, Identifier $id)
+    public static function create( Identifier $id,Name $name)
     {
-        return new self($name, $id);
+        return new self($id, $name);
     }
 
     public static function update(self $tag, Name $name)
