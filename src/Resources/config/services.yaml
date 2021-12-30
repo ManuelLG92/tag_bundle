@@ -5,13 +5,13 @@ services:
     autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
 
   Wamb\:
-    resource: '../../'
+    resource: '../../../src/'
     exclude:
-      - '../../DependencyInjection/'
-      - '../../Entity/'
-      - '../../Resources/'
-      - '../../TaggingBundle.php'
-      - '../../Tests/'
+      - '../../../src/DependencyInjection/'
+      - '../../../src/Entity/'
+      - '../../../src/Resources/'
+      - '../../../src/TaggingBundle.php'
+      - '../../../src/Tests/'
       -
   #Wamb\TaggingBundle\Application\Command\CreateTag\CreateTagHandler: ~
   #Wamb\TaggingBundle\Infrastructure\Symfony\Validators\TagCommandValidator: ~
