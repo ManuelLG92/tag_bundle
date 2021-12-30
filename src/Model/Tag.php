@@ -5,11 +5,11 @@ namespace Wamb\TaggingBundle\Model;
 use Wamb\TaggingBundle\ValueObjects\Identifier;
 use Wamb\TaggingBundle\ValueObjects\Name;
 
-final class Tag
+class Tag
 {
     private function __construct(
-        private Name $name,
-        private readonly Identifier $id,
+        protected Name $name,
+        protected readonly Identifier $id,
     )
     {
     }

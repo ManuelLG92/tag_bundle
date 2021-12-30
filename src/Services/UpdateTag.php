@@ -12,7 +12,7 @@ final class UpdateTag
     public static function update(Tag $tag, string $name): JsonResponse
     {
         $name = new Name($name);
-        Tag::update($tag, $name);
-        return new JsonResponse([], 201);
+        $tag = Tag::update($tag, $name);
+        return new JsonResponse(['updated' => json_encode($tag)], 201);
     }
 }

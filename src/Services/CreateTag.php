@@ -17,7 +17,7 @@ final class CreateTag
     {
         $name = new Name($name);
         $id = new Identifier($id);
-        Tag::create($name, $id);
-        return new JsonResponse([], 201);
+        $tag = Tag::create($name, $id);
+        return new JsonResponse(['created' => json_encode($tag)], 201);
     }
 }
