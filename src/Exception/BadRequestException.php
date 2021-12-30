@@ -2,30 +2,16 @@
 
 namespace Wamb\TaggingBundle\Exception;
 
-class BadRequestException extends \Exception
+class BadRequestException extends Exception
 {
 
-    public function __construct(
-        public string $text = 'Bad Request',
-        public array $parameters = [], int $code = 400, \Throwable $previous = null)
+    public function __construct(string $text = 'Bad Requested', array $parameters = [], int $code = 400, \Throwable $previous = null)
     {
-        $this->message = strtr($this->text, $this->parameters);
-
-        parent::__construct($this->message, $code, $previous);
+        parent::__construct($text, $parameters, $code, $previous);
     }
 
-    public static function create(string $message): static
+    public static function body(string $attribute): self
     {
-        return new static($message, []);
-    }
-
-    public function text(): string
-    {
-        return $this->text;
-    }
-
-    public function parameters(): array
-    {
-        return $this->parameters;
+        return new BadRequestException('Bad Request. %attribute% must not be empty.', ['%attribute%' => $attribute]);
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Wamb\TaggingBundle\Exception;
 
-class InvalidAttributeException extends \Exception
+class InvalidAttributeException extends BadRequestException
 {
 
     public static function fromText(string $text): self

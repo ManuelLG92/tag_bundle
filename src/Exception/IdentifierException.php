@@ -2,7 +2,7 @@
 
 namespace Wamb\TaggingBundle\Exception;
 
-class IdentifierException extends \Exception
+class IdentifierException extends Exception
 {
 
     /**
