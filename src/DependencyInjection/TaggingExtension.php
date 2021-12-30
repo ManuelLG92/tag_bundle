@@ -21,7 +21,7 @@ class TaggingExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
         foreach ($config as $key => $value) {
-            $container->setParameter('wamb/tagging-bundle.' . $key, $value);
+            $container->setParameter('tagging_bundle.' . $key, $value);
         } /**/
     }
 }

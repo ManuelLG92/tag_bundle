@@ -16,8 +16,8 @@ class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = new TreeBuilder('wamb/tagging-bundle');
-        /*
+        $treeBuilder = new TreeBuilder('tagging_bundle');
+
                 $treeBuilder->getRootNode()
                     ->children()
                     ->scalarNode('frames')->end()
@@ -35,7 +35,7 @@ class Configuration implements ConfigurationInterface
                         ->arrayNode('scripts')->scalarPrototype()->end()->end()
                         ->arrayNode('styles')->scalarPrototype()->end()->end()
                     ->end()
-                    ->end();*/
+                    ->end();/**/
 
         return $treeBuilder;
     }
