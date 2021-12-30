@@ -5,8 +5,8 @@ namespace Wamb\TaggingBundle\Entity;
 class Tag
 {
     private function __construct(
-        protected readonly Identifier $id,
-        protected Name $name,
+        public readonly Identifier $id,
+        public Name $name,
     )
     {
     }
@@ -21,6 +21,14 @@ class Tag
         $tag->name = $name;
         return $tag;
 
+    }
+
+    /**
+     * @param Name $name
+     */
+    public function setName(Name $name): void
+    {
+        $this->name = $name;
     }
 
 }

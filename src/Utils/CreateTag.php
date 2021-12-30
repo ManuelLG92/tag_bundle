@@ -1,6 +1,6 @@
 <?php
 
-namespace Wamb\TaggingBundle\Services;
+namespace Wamb\TaggingBundle\Utils;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -30,6 +30,6 @@ final class CreateTag
         $this->manager->flush();
         return $tag;
 
-        return new JsonResponse(['created' => $tag], 200);
+        //return new JsonResponse(['created' => $tag], 200);
     }
 }

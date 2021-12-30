@@ -14,4 +14,9 @@ class Identifier
     {
         IdentifierException::is($value);
     }
+
+    public function value(): string
+    {
+        return $this->value;
+    }
 }

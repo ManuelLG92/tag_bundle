@@ -1,6 +1,6 @@
 <?php
 
-namespace Wamb\TaggingBundle\Services;
+namespace Wamb\TaggingBundle\Utils;
 
 use Wamb\TaggingBundle\Entity\Name;
 use Wamb\TaggingBundle\Entity\Tag;
