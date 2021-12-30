@@ -13,11 +13,12 @@ final class CreateTag
     /**
      * @throws InvalidAttributeException
      */
-    public static function create(string $name, string $id): JsonResponse
+    public static function create(string $name, string $id): Tag
     {
         $name = new Name($name);
         $id = new Identifier($id);
-        $tag = Tag::create($name, $id);
+        return Tag::create($name, $id);
+
         return new JsonResponse(['created' => $tag], 200);
     }
 }
