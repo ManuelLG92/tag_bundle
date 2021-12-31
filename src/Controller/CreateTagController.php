@@ -21,7 +21,7 @@ final class CreateTagController extends ParentController
         private   readonly CreateTagHandler $handler
     )
     {
-        parent::__construct($container);
+        //parent::__construct($container);
     }
     /*public function __construct( private readonly TagCommandValidator $commandValidator,
                                  private readonly CreateTagHandler    $handler)
