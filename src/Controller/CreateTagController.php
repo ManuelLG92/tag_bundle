@@ -16,7 +16,6 @@ use Wamb\TaggingBundle\Utils\Constants\TagProperties;
 final class CreateTagController extends ParentController
 {
     public function __construct(
-        protected ContainerInterface $container,
         private   readonly TagCommandValidator $commandValidator,
         private   readonly CreateTagHandler $handler
     )
