@@ -4,6 +4,10 @@ namespace Wamb\TaggingBundle;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 
-final class TaggingBundle extends Bundle
+class TaggingBundle extends Bundle
 {
+    public function getPath(): string
+    {
+        return \dirname(__DIR__);
+    }
 }
