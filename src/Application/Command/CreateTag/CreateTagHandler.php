@@ -16,11 +16,10 @@ final class CreateTagHandler
     /**
      * @throws InvalidAttributeException
      */
-    public function __invoke(CreateTagCommand $command): JsonResponse
+    public function __invoke(CreateTagCommand $command): void
     {
         $id = new Identifier($command->id);
         $name = new Name($command->name);
         ($this->useCase)($id,$name);
-        return new JsonResponse([],201);
     }
 }

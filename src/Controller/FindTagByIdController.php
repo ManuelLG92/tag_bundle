@@ -15,17 +15,22 @@ use Wamb\TaggingBundle\Utils\Constants\TagProperties;
 
 final class FindTagByIdController extends AbstractController
 {
+    public function __construct(private readonly TagQueryValidator $commandValidator,
+                                private readonly FindTagByIdHandler $handler)
+    {
+    }
+
     /**
      * @throws ValidationCommandException
      * @throws InvalidAttributeException
      * @throws NotFoundException
      */
-    public function __invoke(Request            $request,
-                             TagQueryValidator  $commandValidator,
-                             FindTagByIdHandler $handler): TagDTO
+    public function __invoke(Request $request): TagDTO
     {
-        $commandValidator->validate($request->request->all());
-        return ($handler)(new FindTagByIdQuery(
+
+        $this->commandValidator->validate($request->request->all());
+
+        return ($this->handler)(new FindTagByIdQuery(
             $request->request->get(TagProperties::ID->value),
         ));
     }

@@ -18,11 +18,10 @@ final class UpdateTagHandler
      * @throws InvalidAttributeException
      * @throws NotFoundException
      */
-    public function __invoke(UpdateTagCommand $command): JsonResponse
+    public function __invoke(UpdateTagCommand $command): void
     {
         $id = new Identifier($command->id);
         $name = new Name($command->name);
         ($this->useCase)($id,$name);
-        return new JsonResponse([],201);
     }
 }

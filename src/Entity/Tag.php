@@ -16,7 +16,7 @@ class Tag
         return new self($id, $name);
     }
 
-    public static function update(self $tag, Name $name)
+    public static function update(self $tag, Name $name): Tag
     {
         $tag->name = $name;
         return $tag;

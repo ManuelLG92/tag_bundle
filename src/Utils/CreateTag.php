@@ -12,12 +12,12 @@ use Wamb\TaggingBundle\Exception\InvalidAttributeException;
 final class CreateTag
 {
     public function __construct(
-                //private  readonly MySqlTagRepository $repository,
                 private EntityManagerInterface $manager
     )
     {
     }
 
+    // todo - this worked before
     /**
      * @throws InvalidAttributeException
      */

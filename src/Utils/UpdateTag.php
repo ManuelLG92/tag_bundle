@@ -8,6 +8,7 @@ use Wamb\TaggingBundle\Entity\Tag;
 final class UpdateTag
 {
 
+    // todo - this worked before
     public static function update(Tag $tag, string $name): Tag
     {
         $name = new Name($name);
