@@ -5,7 +5,7 @@
     <services>
         <defaults autowire="true" autoconfigure="true"/>
         <!-- ... -->
-        <prototype namespace="@WambTaggingBundle/" resource="." exclude="./{DependencyInjection,Entity,Kernel.php}"/>
+        <prototype namespace="Wamb\TaggingBundle\" resource="." exclude="./{DependencyInjection,Entity,TaggingBundle.php}"/>
 
 
     </services>
