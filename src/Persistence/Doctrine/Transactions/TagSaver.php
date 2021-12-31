@@ -15,7 +15,6 @@ final class TagSaver
 
     public function saveTag(Tag $tag): void
     {
-
             $this->manager->persist($tag);
             $this->manager->flush();
 
