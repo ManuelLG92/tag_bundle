@@ -7,8 +7,8 @@ services:
   Wamb\TaggingBundle\:
     resource: './*'
     exclude:
-      - './DependencyInjection/'
-      - './Entity/'
+    #  - './DependencyInjection/'
+    #  - './Entity/'
       - './TaggingBundle.php'
 
   #Wamb\TaggingBundle\Application\Command\CreateTag\CreateTagHandler: ~
