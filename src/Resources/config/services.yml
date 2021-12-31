@@ -5,7 +5,7 @@ services:
     autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
 
   Wamb\TaggingBundle\:
-    resource: './*'
+    resource: '.'
     exclude:
       - './DependencyInjection/'
       - './Entity/'
