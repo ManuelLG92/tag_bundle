@@ -34,6 +34,7 @@ final class CreateTagController extends ParentController
      */
     public function __invoke(Request $request): JsonResponse
     {
+        //$this->container->get()
         $this->commandValidator->validate($request->request->all());
         ($this->handler)(new CreateTagCommand(
             $request->request->get(TagProperties::ID->value),
