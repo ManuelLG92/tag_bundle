@@ -5,6 +5,7 @@
     <services>
         <defaults autowire="true" autoconfigure="true"/>
         <!-- ... -->
+        <prototype namespace="Wamb\TaggingBundle\" resource="." exclude="./{DependencyInjection,Entity,Kernel.php}"/>
 
         <!-- autowire is redundant thanks to defaults, but value is overridable on each service -->
         <!--<service id="App\Service\TwitterClient" autowire="true"/>
