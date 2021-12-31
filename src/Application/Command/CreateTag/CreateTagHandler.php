@@ -9,20 +9,18 @@ use Wamb\TaggingBundle\Exception\InvalidAttributeException;
 
 final class CreateTagHandler
 {
-    public function __construct()
+    public function __construct(private readonly CreateTagUseCase $useCase)
     {
     }
 
     /**
      * @throws InvalidAttributeException
      */
-    public function __invoke(
-        CreateTagCommand $command,
-        CreateTagUseCase $useCase): JsonResponse
+    public function __invoke(CreateTagCommand $command): JsonResponse
     {
         $id = new Identifier($command->id);
         $name = new Name($command->name);
-        ($useCase)($id,$name);
+        ($this->useCase)($id,$name);
         return new JsonResponse([],201);
     }
 }
