@@ -13,7 +13,7 @@ use Wamb\TaggingBundle\Exception\ValidationCommandException;
 use Wamb\TaggingBundle\Infrastructure\Symfony\Validators\TagCommandValidator;
 use Wamb\TaggingBundle\Utils\Constants\TagProperties;
 
-class CreateTagController extends ParentController
+class CreateTagController
 {
     public function __construct()
     {
