@@ -3,6 +3,7 @@
 namespace Wamb\TaggingBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Wamb\TaggingBundle\Application\Command\CreateTag\CreateTagCommand;
@@ -12,12 +13,20 @@ use Wamb\TaggingBundle\Exception\ValidationCommandException;
 use Wamb\TaggingBundle\Infrastructure\Symfony\Validators\TagCommandValidator;
 use Wamb\TaggingBundle\Utils\Constants\TagProperties;
 
-final class CreateTagController extends AbstractController
+final class CreateTagController extends ParentController
 {
-    public function __construct( private readonly TagCommandValidator $commandValidator,
+    public function __construct(
+        protected readonly ContainerInterface $container,
+        private   readonly TagCommandValidator $commandValidator,
+        private   readonly CreateTagHandler $handler
+    )
+    {
+        parent::__construct($container);
+    }
+    /*public function __construct( private readonly TagCommandValidator $commandValidator,
                                  private readonly CreateTagHandler    $handler)
     {
-    }
+    }*/
 
 
     /**
