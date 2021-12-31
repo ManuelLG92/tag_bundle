@@ -13,15 +13,15 @@ use Wamb\TaggingBundle\Exception\ValidationCommandException;
 use Wamb\TaggingBundle\Infrastructure\Symfony\Validators\TagCommandValidator;
 use Wamb\TaggingBundle\Utils\Constants\TagProperties;
 
-final class CreateTagController extends ParentController
+class CreateTagController extends ParentController
 {
-    public function __construct(
+    /*public function __construct(
         private   readonly TagCommandValidator $commandValidator,
         private   readonly CreateTagHandler $handler
     )
     {
         //parent::__construct($container);
-    }
+    }*/
     /*public function __construct( private readonly TagCommandValidator $commandValidator,
                                  private readonly CreateTagHandler    $handler)
     {
@@ -32,14 +32,19 @@ final class CreateTagController extends ParentController
      * @throws ValidationCommandException
      * @throws InvalidAttributeException
      */
-    public function __invoke(Request $request): JsonResponse
+    public function __invoke(
+        Request $request,
+        TagCommandValidator $commandValidator,
+        CreateTagHandler $handler): JsonResponse
     {
         //$this->container->get()
-        $this->commandValidator->validate($request->request->all());
-        ($this->handler)(new CreateTagCommand(
+        $commandValidator->validate($request->request->all());
+        ($handler)(new CreateTagCommand(
             $request->request->get(TagProperties::ID->value),
             $request->request->get(TagProperties::NAME->value),
         ));
         return new JsonResponse([], 201);
     }
+
+
 }
