@@ -17,10 +17,6 @@ final class CreateTag
     {
     }
 
-    // todo - this worked before
-    /**
-     * @throws InvalidAttributeException
-     */
     public function create(string $name, string $id): Tag
     {
         $name = new Name($name);
@@ -29,7 +25,5 @@ final class CreateTag
         $this->manager->persist($tag);
         $this->manager->flush();
         return $tag;
-
-        //return new JsonResponse(['created' => $tag], 200);
     }
 }
